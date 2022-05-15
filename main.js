@@ -51,3 +51,41 @@ function calcular() {
 }
 
 calcular();
+
+//*Registro para envío de mailing*//
+
+class Inmueble {
+  constructor(m2cub, m2desc, estado, nombre, mail) {
+    this.m2cub = m2cub;
+    this.m2desc = m2desc;
+    this.estado = estado;
+    this.nombre = nombre;
+    this.mail = mail;
+  }
+
+  mailing() {
+    console.log(
+      "Hola, " +
+        this.nombre +
+        ": Recientemente realizaste una tasación aproximada para un inmueble. El mismo cuenta con " +
+        this.m2cub +
+        "m2 cubiertos y " +
+        this.m2desc +
+        "m2 descubiertos, propios de balcones, terrazas y/o patios. Además, indicaste que el estado del mismo corresponde con un nivel " +
+        this.estado +
+        "\n ¿Estás pensando en vender? Te ofrecemos nuestros servicios de tasación personalizada, así como también el acompañamiento en todo el proceso de venta. \n somos expertos en la zona y podemos ayudarte a optimizar la experiencia. \n Quedamos a tu disposición. \n El equipo de PP Bienes Raíces. "
+    );
+  }
+}
+
+const inmuebles = [];
+
+inmuebles.push(new Inmueble("50", "0", "2", "Pia", "pia@pia.com"));
+inmuebles.push(new Inmueble("80", "5", "1", "Juan", "juan@juan.com"));
+inmuebles.push(new Inmueble("120", "25", "2", "Laura", "lau@lau.com"));
+inmuebles.push(new Inmueble("65", "12", "3", "Raquel", "ra@quel.com"));
+inmuebles.push(new Inmueble("185", "30", "1", "Antonio", "tony@tonio.com"));
+
+for (Inmueble of inmuebles) {
+  Inmueble.mailing();
+}
