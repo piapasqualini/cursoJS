@@ -18,7 +18,7 @@ let estado = ingresoDatos(
   "¿En qué estado de mantenimiento se encuentra el inmueble? \n Ingresa 1 si el estado es Como nuevo, o a estrenar \n Ingresa 2 si el estado es regular: todo se encuentra en funcionamiento pero se precisa alguna mejora \n Ingresa 3 si el estado es a refaccionar"
 );
 
-if (m2cub === "" || m2desc === "" || estado === "") {
+if (m2cub === " " || m2desc === " " || estado === " ") {
   alert("¡Atención! Falta aportar datos");
 } else {
   alert(
@@ -64,7 +64,7 @@ function ingresoString(solString) {
   return datoString;
 }
 
-if ((masInfo = true)) {
+if (masInfo == true) {
   let nombre = ingresoString("Ingresa tu nombre.");
   let mail = ingresoString("Ingresa tu mail.");
   console.log(nombre, mail);
