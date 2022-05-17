@@ -54,6 +54,24 @@ calcular();
 
 //*Registro para envío de mailing*//
 
+let masInfo = confirm(
+  "Si esta información te resultó de utilidad, y querés que te contactemos para realizar una tasación profesional personalmente en el inmueble, dejanos tus datos. \n Hacé click en ACEPTAR y tomaremos tus datos. De lo contratio, haz click en cancelar."
+);
+
+function ingresoString(solString) {
+  let datoString = prompt(solString);
+  console.log(datoString);
+  return datoString;
+}
+
+if ((masInfo = true)) {
+  let nombre = ingresoString("Ingresa tu nombre.");
+  let mail = ingresoString("Ingresa tu mail.");
+  console.log(nombre, mail);
+} else {
+  alert("Gracias por su visita.");
+}
+
 class Inmueble {
   constructor(m2cub, m2desc, estado, nombre, mail) {
     this.m2cub = m2cub;
@@ -80,11 +98,7 @@ class Inmueble {
 
 const inmuebles = [];
 
-inmuebles.push(new Inmueble("50", "0", "2", "Pia", "pia@pia.com"));
-inmuebles.push(new Inmueble("80", "5", "1", "Juan", "juan@juan.com"));
-inmuebles.push(new Inmueble("120", "25", "2", "Laura", "lau@lau.com"));
-inmuebles.push(new Inmueble("65", "12", "3", "Raquel", "ra@quel.com"));
-inmuebles.push(new Inmueble("185", "30", "1", "Antonio", "tony@tonio.com"));
+inmuebles.push(new Inmueble(m2cub, m2desc, estado, "Pia", "pia@pia.com"));
 
 for (Inmueble of inmuebles) {
   Inmueble.mailing();
